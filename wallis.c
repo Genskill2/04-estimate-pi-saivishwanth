@@ -5,7 +5,7 @@
 
 float wallis_pi(int i){
  float ans;
- for(int j=0;j<=i;j++){
+ for(int j=1;j<=inf;j++){
     ans*=(float)2*(4*j*j)/(4*j*j-1);
  }
   return ans;
