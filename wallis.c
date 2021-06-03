@@ -4,11 +4,7 @@
 #include <math.h>
 
 float wallis_pi(int i){
- float ans;
- for(int j=i;j<=50000;j++){
-    ans*=(double)(4*j*j)/(4*j*j-1);
- }
-  return ans*2;
+
 }
 
 int main(void) {
@@ -29,4 +25,14 @@ int main(void) {
     }
   }
 }
-
+float wallis_pi(int n)
+{
+int i;
+float k,ans=1.0;
+for(i=1;i<=n;i++)
+{
+k=(float)(4*i*i)/(4*i*i-1);
+ans=ans*k;
+}
+return(2*ans);
+}
