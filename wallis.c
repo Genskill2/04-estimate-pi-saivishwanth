@@ -5,10 +5,10 @@
 
 float wallis_pi(int i){
  float ans;
- for(int j=1;j<=inf;j++){
-    ans*=(float)2*(4*j*j)/(4*j*j-1);
+ for(int j=i;j<=50000;j++){
+    ans*=(double)(4*j*j)/(4*j*j-1);
  }
-  return ans;
+  return ans*2;
 }
 
 int main(void) {
