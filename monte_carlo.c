@@ -26,6 +26,7 @@ int main(void) {
 
   if (fabs(pi0 - pi1) > 0.05) {
       printf("Two separate estimates %f and %f are too different.\n", pi0, pi1);
+   
       abort();
   }
 
@@ -37,6 +38,19 @@ int main(void) {
       abort();
     }
   }
+}
+float mc_pi(int a){
+    float count=0;
+    for(int i=0;i<a;i++){
+        float x=frandom();
+        float y=frandom();
+        float d=sqrt(pow(x,2)+pow(y,2));
+        if(d<1){
+            count++;
+        }
+    }
+    float k = 4*count/a;
+    return k;
 }
 
 
